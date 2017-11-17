@@ -1724,13 +1724,13 @@ body.files .item-file {
 /* Screen - Mobile */
 @media screen and (min-width: 40em) {
   /* -------------------------------------------------------------------------*/
-  /* Table of Contents 
+  /* Table of Contents
   -- Layout
   -- General
   -- Search
   -- Navigation
   -- Exhibits
-  
+
   /* -------------------------------------------------------------------------*/
   /* Layout */
   #site-title {
@@ -1862,9 +1862,9 @@ body.files .item-file {
     float: right;
     /* a top level navigation item in the mega menu */
     /* first descendant link within a top level navigation item */
-    /* focus/open states of first descendant link within a top level 
+    /* focus/open states of first descendant link within a top level
        navigation item */
-    /* open state of first descendant link within a top level 
+    /* open state of first descendant link within a top level
        navigation item */
   }
   #top-nav .nav-menu .active {
@@ -2095,7 +2095,7 @@ body.files .item-file {
    ========================================================================== */
 
 /* Scrolling Progress Bar - https://codepen.io/grzebla/pen/raVVBY , also used
-   this to lock menu to top: 
+   this to lock menu to top:
    https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_menu */
 
 .counter{
@@ -2110,7 +2110,7 @@ header {
   width: 100%;
   overflow: hidden;
   background: #eee;
-  top: 0; /* this is currently causing the header to cover the admin bar */
+  top: 0; /* TODO: this is currently causing the header to cover the admin bar */
   z-index: 99;
 }
 

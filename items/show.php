@@ -3,21 +3,27 @@
 <div class="row sh-metadata">
     <div class="col-sm-7">
         <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
-        <table>
-            <?php foreach (item_type_elements() as $element => $elementtext): ?>
-                <?php if ($elementtext != ""): ?>
-                    <tr class="element">
-                        <td><?php echo $element ?>:</td>
-                        <td><?php echo $elementtext ?></td>
-                    </tr>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        </table>
+        <?php if (count($item->getItemTypeElements()) > 0): ?>
+            <table>
+                <?php foreach (item_type_elements() as $element => $elementtext): ?>
+                    <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription"): ?>
+                        <tr class="element">
+                            <td><?php echo $element ?>:</td>
+                            <td><?php echo $elementtext ?></td>
+                        </tr>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </table>
+        <?php endif ?>
     </div>
-    <div class="col-sm-5 sh-show-thumbs">
-        <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-        <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle), 1)); ?>
-    </div>
+    <?php if (metadata('item', 'has files')): ?>
+        <div class="col-sm-5 sh-show-thumbs">
+            <?php echo link_to_item(item_image('square_thumbnail')); ?>
+            <?php if (count($item->getFiles()) > 1 && $item->getFile(1)->has_derivative_image): ?>
+                <?php echo link_to_item(item_image('square_thumbnail', null, 1)); ?>
+            <?php endif ?>
+        </div>
+    <?php endif ?>
 </div>
 
 <?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>

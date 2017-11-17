@@ -25,40 +25,41 @@
     queue_css_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     queue_css_file(array('iconfonts','style'));
     echo head_css();
+    queue_css_url('//fonts.googleapis.com/css?family=Barlow');
     ?>
 
     <!-- JavaScripts -->
-    <?php 
+    <?php
     queue_js_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
     queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
-    echo head_js(); 
+    echo head_js();
     ?>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
-    
+
     <header role="banner" class="sh-header">
 
         <div id="header-wrap">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
-    
+
             <?php echo theme_header_image(); ?>
-    
+
             <div id="site-title"><?php echo link_to_home_page(theme_logo()); ?></div>
-            
+
             <nav id="top-nav" role="navigation">
                 <?php echo public_nav_main(); ?>
             </nav>
         </div>
-        
-        <div class="counter"></div>        
 
-    </header>    
-    
+        <div class="counter"></div>
+
+    </header>
+
     <div id="wrap">
-        
+
         <article id="content" role="main" tabindex="-1">
-        
+
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
