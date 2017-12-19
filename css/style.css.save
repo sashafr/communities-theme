@@ -132,8 +132,8 @@ h1 {
  * Address styling not present in IE 8/9.
  */
 mark {
-  background: #D7CEsD7;
-  color: #D7CED7;
+  background: #ff0;
+  color: #000;
 }
 
 /**
@@ -529,11 +529,11 @@ footer {
 }
 
 body {
-  background-color: #EAE7DC;
+  background-color: #fff;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
+  color: #1655;
   margin: 0;
 }
 
@@ -694,7 +694,7 @@ h1, h2, #item-filters .collection, h3, h4, h5, h6 {
   line-height: 36px;
   padding: .5em 0;
   margin: 0;
-  color: #333333;
+  color: #76323F;
 }
 
 h4, h5, h6 {
@@ -706,7 +706,7 @@ h5, h6 {
 }
 
 h1 {
-  text-transform: titlecase;
+  text-transform: uppercase;
   font-size: 40px;
   clear: both;
   word-wrap: break-word;
@@ -715,7 +715,7 @@ h1 {
 h2, #item-filters .collection {
   font-size: 32px;
   text-transform: capitalize;
-  border-top: 2px solid #800033;
+  border-top: 4px solid #ddd;
 }
 
 h3 {
@@ -727,7 +727,7 @@ h6 {
 }
 
 #site-title {
-  color: #76323F;
+  color: #565656;
   font-family: 'Slabo 27px'sans-serif;
   text-transform: uppercase;
   font-size: 40px;
@@ -737,29 +737,29 @@ h6 {
 }
 #site-title a {
   text-decoration: none;
-  color: #800033;
+  color: #5C3F8D;
 }
 
 /* -------------------------------------------------------------------------*/
 /* Links */
 a {
-  color: #333333;s
-  text-decoration: underline;
+  color: #684B98;
+  text-decoration: none;
 }
 a:visited {
-  color: #333333;
+  color: #8164b2;
 }
 a:focus {
-  color: #333333;
+  color: #5C3F8D;
 }
 a:hover {
-  color: #595959;
+  color: #c170d0;
 }
 a:active {
-  color: #333333;
+  color: #BE75CB;
 }
 a:hover {
-  text-decoration: inherit;
+  text-decoration: underline;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -861,7 +861,7 @@ a:hover {
   min-height: 36px;
   padding: 0.375em;
   display: block;
-  background-color: #E8DACF;
+  background-color: #eaeaea;
   margin-bottom: .5em;
   border: 0;
   line-height: 24px;
@@ -878,7 +878,7 @@ a:hover {
 .pagination .pagination_previous a:active,
 .pagination .previous-page a:active,
 .pagination .next-page a:active {
-  background-color: #E8DACF;
+  background-color: #BE75CB;
 }
 
 .pagination_next a,
@@ -1020,7 +1020,7 @@ a:hover {
 }
 #top-nav .sub-nav {
   display: none;
-  background-color: #565656;
+  background-color: #f7f7f7;
 }
 #top-nav .sub-nav.open {
   display: block;
@@ -1041,7 +1041,7 @@ a:hover {
 #top-nav .sub-nav.open li a:hover {
   color: white;
   text-decoration: none;
-  background-color: #565656;
+  background-color: #cf9ad9;
 }
 #top-nav .sub-nav.open .active a {
   color: white;
@@ -1098,21 +1098,21 @@ button,
   min-height: 36px;
   padding: 0.375em;
   display: block;
-  background-color: #C09F80;
+  background-color: #eaeaea;
   margin-bottom: .5em;
   border: 0;
 }
 input[type=submit]:hover,
 button:hover,
 .button:hover {
-  background-color: #D8C3A5;
+  background-color: #684B98;
   color: white;
   text-decoration: none;
 }
 input[type=submit]:active,
 button:active,
 .button:active {
-  background-color: #C09F80;
+  background-color: #BE75CB;
 }
 
 .button:focus {
@@ -1882,10 +1882,10 @@ body.files .item-file {
     padding: .5em;
   }
   #top-nav .nav-menu a:link, #top-nav .nav-menu a:visited {
-    color: #333333;
+    color: #684B98;
   }
   #top-nav .nav-menu a:hover, #top-nav .nav-menu a:focus {
-    background-color: #c19c25;
+    background-color: #684B98;
   }
   #top-nav .nav-menu .nav-item {
     list-style: none;
@@ -1907,7 +1907,7 @@ body.files .item-file {
     padding: .5em 1em;
     margin: 0;
     border: 0;
-    color: #333333;
+    color: #684B98;
   }
   #top-nav .nav-menu .nav-item > a:hover {
     color: white;
@@ -2100,7 +2100,7 @@ body.files .item-file {
 
 .counter{
   height: 5px;
-  background: #800033;
+  background: #5C3F8D;
   position: fixed;
   top: 85px;
 }
@@ -2109,7 +2109,7 @@ header {
   position: fixed;
   width: 100%;
   overflow: hidden;
-  background: #ffffff;
+  background: #eee;
   top: 0; /* TODO: this is currently causing the header to cover the admin bar */
   z-index: 99;
 }
@@ -2142,54 +2142,3 @@ header {
     text-align: center;
 }
 
-/* jQuery Expanding Read More - https://codepen.io/mickeykay/pen/vADrw */
-
-.read-more-content {
-    position: relative;
-    overflow: hidden;
-    margin: 30px 0;
-    padding: 20px 20px 4em 20px;
-    box-shadow: 0 0 15px #999;
-}
-
-.read-more-wrap {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.more-link {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      display: block;
-      width: 100%;
-      padding: 8px;
-      background: #555;
-      color: #FFF;
-      text-align: center;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 10px #000;
-}
-
-.more-link:hover {
-      background: #5E5E5E;
-      color: #FFF;
-}
-
-.more-link:after {
-	margin-left: 8px;
-	font-size: .8em;
-}
-
-.more-link:visited, .more-link:focus {
-    color: #FFF;
-    text-decoration: none;
-}
-
-/* Sticky Sidebar */
-.sticky {
-    position: sticky;
-    top: 20px;
-    height: 100vh;
-}

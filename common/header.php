@@ -25,13 +25,14 @@
     queue_css_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     queue_css_file(array('iconfonts','style'));
     echo head_css();
-    queue_css_url('//fonts.googleapis.com/css?family=Barlow');
+    queue_css_url('//fonts.googleapis.com/css?family=Barlow+Condensed:400,600|Open+Sans+Condensed:300|Slabo+27px');
     ?>
 
     <!-- JavaScripts -->
     <?php
     queue_js_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
     queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
+    queue_js_file(array('readmore', 'minimalist', 'globals'));
     echo head_js();
     ?>
 </head>

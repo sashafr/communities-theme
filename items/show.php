@@ -6,7 +6,7 @@
         <?php if (count($item->getItemTypeElements()) > 0): ?>
             <table>
                 <?php foreach (item_type_elements() as $element => $elementtext): ?>
-                    <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription"): ?>
+                    <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription" && $element != "Interview Summary"): ?>
                         <tr class="element">
                             <td><?php echo $element ?>:</td>
                             <td><?php echo $elementtext ?></td>
@@ -26,9 +26,24 @@
     <?php endif ?>
 </div>
 
-<?php if ((get_theme_option('Item FileGallery') == 0) && metadata('item', 'has files')): ?>
-<?php echo files_for_item(array('imageSize' => 'fullsize')); ?>
-<?php endif; ?>
+<div class="row">
+    <div class="col-sm-8 read-more-wrap">
+        <?php if (metadata('item', array('Item Type Metadata', 'Transcription')) != ""): ?>
+            <div class="read-more-content">
+                <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
+            </div>
+        <?php else: ?>
+            <p>This item does not have a transcription yet.</p>
+        <?php endif; ?>
+    </div>
+    <div class="col-sm-4 sticky">
+        <?php if (metadata('item', 'has files')): ?>
+            <?php echo files_for_item(array('imageSize' => 'square_thumbnail')); ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+
 
 <!-- The following returns all of the files associated with an item. -->
 <?php if ((get_theme_option('Item FileGallery') == 1) && metadata('item', 'has files')): ?>
