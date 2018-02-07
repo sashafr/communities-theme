@@ -35,6 +35,7 @@
     queue_js_file(array('readmore', 'minimalist', 'globals'));
     echo head_js();
     ?>
+    <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </head>
 
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
