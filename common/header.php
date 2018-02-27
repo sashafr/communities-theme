@@ -62,6 +62,6 @@
 
     <div id="wrap">
 
-        <article id="content" role="main" tabindex="-1">
+        <article id="content" class="noborderclick" role="main" tabindex="-1">
 
             <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
