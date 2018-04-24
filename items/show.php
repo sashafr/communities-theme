@@ -7,9 +7,9 @@
             <table>
                 <?php foreach (item_type_elements() as $element => $elementtext): ?>
                     <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription" && $element != "Interview Summary"): ?>
-                        <tr class="element">
-                            <td><?php echo $element ?>:</td>
-                            <td><?php echo $elementtext ?></td>
+                        <tr class="element" >
+                            <td ><?php echo $element ?>:</td>
+                            <td ><?php echo $elementtext ?></td>
                         </tr>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -21,8 +21,8 @@
             <?php if( $item->getFile(0)->has_derivative_image):
                 $file0 = $item->getFile(0);
                 $url0 = record_url($file0); ?>
-                <a href="<?php echo $url0?>">
-                    <?php echo file_image('square_thumbnail', array('class' => 'thumbnail'), $file0); ?>
+                <a href="<?php echo $url0?>" style = "height:200px">
+                    <?php echo file_image('fullsize', array('class' => 'thumbnail'), $file0); ?>
                 </a>
 
 
@@ -63,7 +63,7 @@
                     <?php for ($x = 2; $x < count($item->getFiles()); $x++) { ?>
                         <?php $file = $item->getFiles()[$x]; ?>
                         <?php $url = record_url($file); ?>
-                        <div class="item-collapsed" style = "display: inline-block; position: relative; float: left; margin-left:40px; margin-top:20px">
+                        <div class="item-collapsed" >
                             <a href="<?php echo $url?>">
                                 <?php echo file_image('square_thumbnail', array('class' => 'thumbnail'), $file); ?>
                             </a>
@@ -92,7 +92,7 @@
     <?php if (metadata('item', 'Collection Name')): ?>
         <div id="collection" class="element">
             <h3><?php echo __('Collection'); ?></h3>
-            <div class="element-text"><p><?php echo link_to_items_browse(metadata('item', 'Collection Name'), array('collection'  => get_collection_for_item())); ?></p></div>
+            <div class="element-text"><p><?php echo link_to_items_browse(metadata('item', 'Collection Name'), array('collection'  => get_collection_for_item()->id)); ?></p></div>
         </div>
     <?php endif; ?>
 

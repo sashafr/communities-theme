@@ -1,3 +1,5 @@
+
+
 <?php
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
@@ -6,6 +8,8 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 <?php echo item_search_filters(); ?>
 
 <?php echo pagination_links(); ?>
+
+
 
 <?php if ($total_results > 0): ?>
 
@@ -19,6 +23,16 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     </div>
 
 <?php endif; ?>
+
+<script>
+var sort = document.getElementById("sort-links-list");
+var sortByTitle = sort.childNodes[0];
+  if (window.location.href == "http://165.227.177.44/items/browse") {
+  //sortByTitle.childNodes[0].click();
+
+}
+
+</script>
 
 <div class="row">
     <div class="col-md-9">
@@ -49,6 +63,10 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
         </div>
 
         <?php echo pagination_links(); ?>
+        <div id="outputs">
+            <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
+            <?php echo output_format_list(false); ?>
+        </div>
     </div>
     <div class="col-md-3">
         <div id = "collections">
@@ -57,7 +75,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
                 ?>
                 <div class = "collection">
                     <a href = "#">
-                        <div class = "collectionTitle" style = "font-weight:bold">
+                        <div class = "collectionTitle">
                             <?php
                             $collection = $collections[$x];
                             echo metadata($collection, array('Dublin Core', 'Title'));
@@ -98,6 +116,8 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
         <script>
         var collection = <?php echo json_encode($collection) ?>;
+
+
         console.log(Object.keys(collection));
         var collectionsTitle = document.getElementsByClassName("collectionTitle");
         var innerCollections = document.getElementsByClassName("innerCollection");
@@ -105,6 +125,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
             collectionsTitle[i].addEventListener("click", displayItemsInCollection(i));
         }
+
 
 
         function displayItemsInCollection(i) {
@@ -132,12 +153,12 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
         </script>
         </div>
     </div>
-</div>
-<div id="outputs">
-    <span class="outputs-label"><?php echo __('Output Formats'); ?></span>
-    <?php echo output_format_list(false); ?>
+
 </div>
 
+
 <?php fire_plugin_hook('public_items_browse', array('items' => $items, 'view' => $this)); ?>
+
+
 
 <?php echo foot(); ?>

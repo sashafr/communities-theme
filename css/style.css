@@ -393,8 +393,7 @@ table {
     border-spacing: 0;
 }
 
-td,
-th {
+td, th {
     padding: 0;
 }
 
@@ -1124,6 +1123,8 @@ button:active,
 #search-container #search-form {
     position: relative;
     height: 36px;
+    width:370px;
+    float:right;
 }
 #search-container input[type=text] {
     margin: 0;
@@ -1174,6 +1175,8 @@ button:active,
     content: "\f141";
 }
 #search-container button:after {
+  font-family: "FontAwesome";
+
     content: "\f002";
 }
 #search-container #advanced-form {
@@ -1289,7 +1292,7 @@ th,
 td {
     border-bottom: 1px solid #ddd;
     margin: 0;
-    padding: 0.5em 0;
+  /*  padding: 0.5em 0;*/
 }
 
 th {
@@ -1297,6 +1300,9 @@ th {
     text-align: left;
 }
 
+td {
+border-bottom:none
+}
 /* -------------------------------------------------------------------------*/
 /* Browse and Item Pages */
 #recent-items .item {
@@ -1734,7 +1740,7 @@ body.files .item-file {
     /* -------------------------------------------------------------------------*/
     /* Layout */
     #site-title {
-        width: 65%;
+
         float: left;
         margin-right: 1.69492%;
         display: inline;
@@ -2102,7 +2108,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_menu */
     height: 5px;
     background: #800033;
     position: fixed;
-    top: 85px;
+    top: 78px;
 }
 
 header {
@@ -2125,7 +2131,6 @@ header {
 /* Item-Type Metadata Box */
 
 .sh-metadata {
-    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -2338,4 +2343,32 @@ header {
         padding-bottom: 44%;
         margin: 3%;
     }
+}
+
+.thumbnail {
+  height:200px;
+}
+
+.item-collapsed {
+display: inline-block;
+position: relative;
+float: left;
+margin-left:40px;
+ margin-top:20px
+}
+
+.collectionTitle{
+font-weight: bold
+}
+
+.sh-header {
+    height: 78px;
+}
+
+.nav-item{
+  left: 86%;
+    background-color: #C09F80;
+    height: 36px;
+    top: 5px;
+
 }
