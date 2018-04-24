@@ -14,25 +14,15 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 <?php if ($total_results > 0): ?>
 
     <?php
-    $sortLinks[__('Title')] = 'Dublin Core,Title';
-    $sortLinks[__('Creator')] = 'Dublin Core,Creator';
-    $sortLinks[__('Date Added')] = 'added';
+    $sortLinks[__('Interviewee')] = 'Dublin Core,Title';
+    $sortLinks[__('Location')] = 'Item Type Metadata,Location';
+    $sortLinks[__('Date of Interview')] = 'Item Type Metadata, Data of Interview';
     ?>
     <div id="sort-links">
         <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>
     </div>
 
 <?php endif; ?>
-
-<script>
-var sort = document.getElementById("sort-links-list");
-var sortByTitle = sort.childNodes[0];
-if (window.location.href == "http://165.227.177.44/items/browse") {
-    //sortByTitle.childNodes[0].click();
-
-}
-
-</script>
 
 <div class="row">
     <div class="col-md-9">
@@ -73,22 +63,15 @@ if (window.location.href == "http://165.227.177.44/items/browse") {
             <?php set_loop_records('collections', get_records('Collection')) ?>
             <?php foreach (loop('collections') as $collection): ?>
                 <div class="collection">
-                    <a href="#<?php echo metadata($collection, 'id') ?>" data-toggle="collapse" >
-                        <div class="collectionTitle">
-                            <?php echo metadata($collection, array('Dublin Core', 'Title')) ?>
-                            <i class="fas fa-caret-down"></i>
-                        </div>
-                    </a>
-                    <div class="innerCollection collapse" id="<?php echo metadata($collection, 'id') ?>">
-                        <ul>
-                            <?php set_loop_records('col_items', get_records('Item', array('collection'=>metadata($collection, 'id')))) ?>
-                            <?php foreach (loop('col_items') as $col_item): ?>
-                                <li>
-                                    <?php echo metadata($col_item, array('Dublin Core', 'Title')) ?>
-                                </li>
-                            <?php endforeach ?>
-                        </ul>
-                    </div>
+                    <?php echo link_to_items_browse(metadata($collection, array('Dublin Core', 'Title')), array('collection'=>metadata($collection, 'id'))); ?>
+                    <ul>
+                        <?php set_loop_records('col_items', get_records('Item', array('collection'=>metadata($collection, 'id')))) ?>
+                        <?php foreach (loop('col_items') as $col_item): ?>
+                            <li>
+                                <?php echo link_to($col_item, 'show', metadata($col_item, array('Dublin Core', 'Title'))) ?>
+                            </li>
+                        <?php endforeach ?>
+                    </ul>
                 </div>
             <?php endforeach ?>
         </div>

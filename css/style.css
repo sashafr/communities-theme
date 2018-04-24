@@ -7,7 +7,7 @@
 *    user zoom.
 */
 html {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -233,7 +233,7 @@ select,
 textarea {
     color: inherit;
     /* 1 */
-    font: 'Barlow Condensed', sans-serif;
+    font: 'Roboto', sans-serif;
     /* 2 */
     margin: 0;
     /* 3 */
@@ -528,8 +528,8 @@ footer {
 }
 
 body {
-    background-color: #EAE7DC;
-    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -667,7 +667,7 @@ blockquote {
     display: inline;
 }
 .view-items-link a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -688,7 +688,7 @@ footer {
 /* -------------------------------------------------------------------------*/
 /* Headings */
 h1, h2, #item-filters .collection, h3, h4, h5, h6 {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', sans-serif;
     font-weight: normal;
     line-height: 36px;
     padding: .5em 0;
@@ -714,7 +714,7 @@ h1 {
 h2, #item-filters .collection {
     font-size: 32px;
     text-transform: capitalize;
-    border-top: 2px solid #800033;
+    border-top: 2px solid #2c3669;
 }
 
 h3 {
@@ -727,7 +727,7 @@ h6 {
 
 #site-title {
     color: #76323F;
-    font-family: 'Slabo 27px'sans-serif;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-size: 40px;
     font-weight: bold;
@@ -736,7 +736,7 @@ h6 {
 }
 #site-title a {
     text-decoration: none;
-    color: #800033;
+    color: #2c3669;
 }
 
 /* -------------------------------------------------------------------------*/
@@ -869,7 +869,7 @@ a:hover {
 .pagination .pagination_previous a:hover,
 .pagination .previous-page a:hover,
 .pagination .next-page a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -944,7 +944,7 @@ a:hover {
     border: 0;
 }
 .item-pagination .next a:hover, .item-pagination .previous a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -1006,7 +1006,7 @@ a:hover {
     padding: 1em 0 1em 1em;
 }
 #top-nav li a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -1015,7 +1015,7 @@ a:hover {
 }
 #top-nav li a.open {
     color: white;
-    background-color: #684B98;
+    background-color: #2c3669;
 }
 #top-nav .sub-nav {
     display: none;
@@ -1033,7 +1033,7 @@ a:hover {
     padding: 0;
 }
 #top-nav .sub-nav.open li a {
-    color: #684B98;
+    color: #2c3669;
     padding: 1em;
     border-bottom: 1px solid white;
 }
@@ -1049,7 +1049,7 @@ a:hover {
     content: "\2014\0020";
 }
 #top-nav [aria-haspopup="true"]:after {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', sans-serif;
     content: "\f0da";
     margin: 0 0 0 .5em;
     vertical-align: bottom;
@@ -1097,7 +1097,8 @@ button,
     min-height: 36px;
     padding: 0.375em;
     display: block;
-    background-color: #C09F80;
+    background-color: #2c3669;
+    color: #fff;
     margin-bottom: .5em;
     border: 0;
 }
@@ -1111,7 +1112,7 @@ button:hover,
 input[type=submit]:active,
 button:active,
 .button:active {
-    background-color: #C09F80;
+    background-color: #2c3669;
 }
 
 .button:focus {
@@ -1142,7 +1143,7 @@ button:active,
     position: absolute;
     top: 0;
     text-align: center;
-    color: #684B98;
+    color: #2c3669;
 }
 #search-container .show-advanced:hover,
 #search-container button:hover {
@@ -1150,7 +1151,7 @@ button:active,
 }
 #search-container .show-advanced:after,
 #search-container button:after {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', sans-serif;
     text-indent: 0;
     position: absolute;
     top: 0;
@@ -1175,9 +1176,9 @@ button:active,
     content: "\f141";
 }
 #search-container button:after {
-  font-family: "FontAwesome";
-
+    font-family: "FontAwesome";
     content: "\f002";
+    color: #fff;
 }
 #search-container #advanced-form {
     position: absolute;
@@ -1266,7 +1267,7 @@ button:active,
 }
 .remove_search:after {
     content: "\f00d";
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', sans-serif;
     text-indent: 0;
     text-align: center;
     width: 100%;
@@ -1486,7 +1487,7 @@ body.files .item-file {
     display: initial;
 }
 #simple-pages-breadcrumbs a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -1616,7 +1617,7 @@ body.files .item-file {
     margin-bottom: 0;
 }
 #exhibit-pages.full #secondary-nav ul li a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -1641,7 +1642,7 @@ body.files .item-file {
     content: "\2014\0020";
 }
 #exhibit-pages.full #secondary-nav .exhibit-title {
-    font-family: 'Slabo 27px', serif;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     padding: .5em 0;
 }
@@ -1672,7 +1673,7 @@ body.files .item-file {
     border: 0;
 }
 #exhibit-child-pages .exhibit-child-nav li a:hover {
-    background-color: #684B98;
+    background-color: #2c3669;
     color: white;
     text-decoration: none;
 }
@@ -1709,7 +1710,7 @@ body.files .item-file {
 #exhibit-page-navigation .current-page {
     clear: both;
     display: block;
-    background-color: #684B98;
+    background-color: #2c3669;
     padding: .5em 0;
     color: white;
     margin-top: .5em;
@@ -1891,7 +1892,7 @@ body.files .item-file {
         color: #333333;
     }
     #top-nav .nav-menu a:hover, #top-nav .nav-menu a:focus {
-        background-color: #c19c25;
+        background-color: #5865a7;
     }
     #top-nav .nav-menu .nav-item {
         list-style: none;
@@ -1913,7 +1914,7 @@ body.files .item-file {
         padding: .5em 1em;
         margin: 0;
         border: 0;
-        color: #333333;
+        color: #fff;
     }
     #top-nav .nav-menu .nav-item > a:hover {
         color: white;
@@ -1923,10 +1924,10 @@ body.files .item-file {
     }
     #top-nav .nav-menu .nav-item > a:focus,
     #top-nav .nav-menu .nav-item > a.open {
-        background-color: #684B98;
+        background-color: #2c3669;
     }
     #top-nav .nav-menu .nav-item > a.open {
-        background-color: #684B98;
+        background-color: #2c3669;
         color: white;
         border-bottom: none;
         z-index: 1;
@@ -1951,7 +1952,7 @@ body.files .item-file {
         background-color: #f7f7f7;
     }
     #top-nav .nav-menu .sub-nav.open .active a {
-        color: #684B98;
+        color: #2c3669;
     }
     #top-nav .nav-menu .sub-nav.open .active a:hover {
         color: white;
@@ -1963,7 +1964,7 @@ body.files .item-file {
         padding: 0;
     }
     #top-nav .nav-menu .sub-nav.open ul a {
-        color: #684B98;
+        color: #2c3669;
     }
     #top-nav .nav-menu .sub-nav.open ul a:before {
         content: "\2014\0020";
@@ -1975,7 +1976,7 @@ body.files .item-file {
         padding: 0;
     }
     #top-nav .nav-menu .sub-nav.open li a {
-        color: #684B98;
+        color: #2c3669;
     }
     #top-nav .nav-menu .sub-nav.open li a:hover {
         background-color: #cf9ad9;
@@ -2041,7 +2042,7 @@ body.files .item-file {
 @media print {
     /* Print Styles */
     body {
-        font: 12px Georgia,'Barlow Condensed', sans-serif;
+        font: 12px Georgia,'Roboto', sans-serif;
     }
 
     #content {
@@ -2106,7 +2107,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_menu */
 
 .counter{
     height: 5px;
-    background: #800033;
+    background: #2c3669;
     position: fixed;
     top: 78px;
 }
@@ -2115,7 +2116,7 @@ header {
     position: fixed;
     width: 100%;
     overflow: hidden;
-    background: #ffffff;
+    background: #e2d1a5;
     top: 0; /* TODO: this is currently causing the header to cover the admin bar */
     z-index: 99;
 }
@@ -2274,7 +2275,6 @@ header {
     font-size: inherit;
     font-weight: 100;
     display: inline-block;
-    text-transform: uppercase;
     position: relative;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -2293,6 +2293,11 @@ header {
     position: relative;
     -webkit-font-smoothing: antialiased;
 }
+
+#allItems .img-btn a {
+    color: #fff;
+}
+
 #allItems .btn-sep {
     margin: 30px 0px;
 }
@@ -2367,7 +2372,7 @@ font-weight: bold
 
 .nav-item{
   left: 86%;
-    background-color: #C09F80;
+    background-color: #2c3669;
     height: 36px;
     top: 5px;
 

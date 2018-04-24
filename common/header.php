@@ -21,12 +21,12 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_url('//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
     queue_css_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     queue_css_file(array('iconfonts','style'));
     echo head_css();
-    queue_css_url('//fonts.googleapis.com/css?family=Barlow+Condensed:400,600|Open+Sans+Condensed:300|Slabo+27px');
     ?>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lato" rel="stylesheet">
 
     <!-- JavaScripts -->
     <?php
@@ -60,7 +60,7 @@
            </div>
 
             <nav id="top-nav" role="navigation">
-              
+
                 <?php echo public_nav_main(); ?>
 
             </nav>
