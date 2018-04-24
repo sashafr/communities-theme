@@ -72,19 +72,6 @@
                     <?php } ?>
                 </div>
             <?php endif; ?>
-
-            <!-- The following prints a list of all tags associated with the item -->
-            <?php if (metadata('item', 'has tags')): ?>
-                <div id="item-tags" class="element row sh-transcription">
-                    <h3><?php echo __('Keywords'); ?></h3>
-                    <div class="element-text">
-                        <?php $tagstring = tag_string('item', $link = 'items/browse'); ?>
-                        <?php $tags = $item->tags;?>
-                        <?php echo nl2br(str_replace(",","\n",$tagstring));?>
-
-                    </div>
-                </div>
-            <?php endif;?>
         </div>
     </div>
 
