@@ -27,8 +27,8 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 <script>
 var sort = document.getElementById("sort-links-list");
 var sortByTitle = sort.childNodes[0];
-  if (window.location.href == "http://165.227.177.44/items/browse") {
-  //sortByTitle.childNodes[0].click();
+if (window.location.href == "http://165.227.177.44/items/browse") {
+    //sortByTitle.childNodes[0].click();
 
 }
 
@@ -69,88 +69,28 @@ var sortByTitle = sort.childNodes[0];
         </div>
     </div>
     <div class="col-md-3">
-        <div id = "collections">
-            <?php $collections = get_records('Collection');
-            for ($x = 0; $x < count($collections); $x++) {
-                ?>
-                <div class = "collection">
-                    <a href = "#">
-                        <div class = "collectionTitle">
-                            <?php
-                            $collection = $collections[$x];
-                            echo metadata($collection, array('Dublin Core', 'Title'));
-                            $innerCollectionId = "innerCollection" . $x;
-                            ?>
-                            <i class="fas fa-caret-down"></i
+        <div id="collections">
+            <?php set_loop_records('collections', get_records('Collection')) ?>
+            <?php foreach (loop('collections') as $collection): ?>
+                <div class="collection">
+                    <a href="#<?php echo metadata($collection, 'id') ?>" data-toggle="collapse" >
+                        <div class="collectionTitle">
+                            <?php echo metadata($collection, array('Dublin Core', 'Title')) ?>
+                            <i class="fas fa-caret-down"></i>
                         </div>
                     </a>
-                    <div class = "innerCollection" id = "<?php echo $innerCollectionId?>" style = "display:none; margin-left:-20px">
-                        <ul style="list-style-type:circle">
-                            <?php
-                            $id = $collection->id;
-                            $items = get_records('Item', array('collection'=>$collection), 50);
-                            for ($y = 0; $y < count($items); $y++) {
-
-                                $item = $items[$y];
-                                $url = record_url($item);
-                                ?>
-                                <a href = "<?php echo $url ?>"> </li>
-                                    &#x2022;
-                                    <?php
-                                    echo metadata($item, array('Dublin Core', 'Title'));
-                                    echo nl2br( "\n");
-                                    ?>
+                    <div class="innerCollection collapse" id="<?php echo metadata($collection, 'id') ?>">
+                        <ul>
+                            <?php set_loop_records('col_items', get_records('Item', array('collection'=>metadata($collection, 'id')))) ?>
+                            <?php foreach (loop('col_items') as $col_item): ?>
+                                <li>
+                                    <?php echo metadata($col_item, array('Dublin Core', 'Title')) ?>
                                 </li>
-                            </a>
-                            <?php
-                        }
-
-                        ?>
-                    </ul>
+                            <?php endforeach ?>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <?php
-        }
-        ?>
-
-        <script>
-        var collection = <?php echo json_encode($collection) ?>;
-
-
-        console.log(Object.keys(collection));
-        var collectionsTitle = document.getElementsByClassName("collectionTitle");
-        var innerCollections = document.getElementsByClassName("innerCollection");
-        for (i = 0; i < collectionsTitle.length; i++) {
-
-            collectionsTitle[i].addEventListener("click", displayItemsInCollection(i));
-        }
-
-
-
-        function displayItemsInCollection(i) {
-            //alert("click");
-            function innerCallback(e) {
-                for (var j = 0; j < innerCollections.length; j++) {
-                    var idNo = innerCollections[j].id.slice(15);
-                    //alert(idNo);
-                    if (idNo == i && innerCollections[j].style.display == "none") {
-                        innerCollections[j].style.display = "block";
-                        return;
-                    }
-
-                    if (idNo ==i && innerCollections[j].style.display == "block") {
-                        innerCollections[j].style.display = "none";
-                        return;
-                    }
-
-
-                }
-            }
-            return innerCallback;
-        }
-
-        </script>
+            <?php endforeach ?>
         </div>
     </div>
 

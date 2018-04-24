@@ -3,7 +3,7 @@ $pageTitle = __('Search') . ' ' . __('(%s total)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 $searchRecordTypes = get_search_record_types();
 ?>
-<h1><?php echo $pageTitle; ?></h1>
+<h1><?php echo $pageTitle; ?><small> - <?php echo link_to_items_browse("View All", array('sort_field'=>'Dublin Core, Title')); ?></small></h1>
 <?php if ($total_results): ?>
 <?php echo pagination_links(); ?>
 

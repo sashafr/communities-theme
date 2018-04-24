@@ -2372,3 +2372,12 @@ font-weight: bold
     top: 5px;
 
 }
+
+.innerCollection {
+    display: none;
+    margin-left: -20px;
+}
+
+.innerCollection ul {
+    list-style-type: circle;
+}
