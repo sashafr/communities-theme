@@ -2368,6 +2368,8 @@ font-weight: bold
 
 .sh-header {
     height: 78px;
+    background: transparent url("../banner.jpg") center left no-repeat;
+    background-size: cover !important;
 }
 
 .nav-item{

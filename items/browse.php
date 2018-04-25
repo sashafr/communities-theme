@@ -32,15 +32,13 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
                 <div class="item-meta">
                     <div class="item-img">
                         <?php if (metadata('item', 'has files')): ?>
-                            <?php echo link_to_item(item_image()); ?>
+                            <?php echo item_image(); ?>
                         <?php else:?>
                             <img src = "../../../application/views/scripts/images/fallback-file.png" height = "200px" width = "200px">
                         <?php endif; ?>
                         <div class="img-caption img-table">
                             <span class="img-table-cell">
-                                <button class="img-btn btn-p btn-trans" role="button">
-                                    <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'permalink')); ?>
-                                </button>
+                                <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'img-btn btn-p btn-trans')); ?>
                             </span>
                         </div>
                     </div>
