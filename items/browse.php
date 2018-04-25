@@ -31,11 +31,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 
                 <div class="item-meta">
                     <div class="item-img">
-                        <?php if (metadata('item', 'has files')): ?>
-                            <?php echo item_image(); ?>
-                        <?php else:?>
-                            <img src = "../../../application/views/scripts/images/fallback-file.png" height = "200px" width = "200px">
-                        <?php endif; ?>
+                        <?php echo item_image(); ?>
                         <div class="img-caption img-table">
                             <span class="img-table-cell">
                                 <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class' => 'img-btn btn-p btn-trans')); ?>
