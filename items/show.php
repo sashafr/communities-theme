@@ -65,7 +65,7 @@
                         <?php $url = record_url($file); ?>
                         <div class="item-collapsed" >
                             <a href="<?php echo $url?>">
-                                <?php echo file_image('square_thumbnail', array('class' => 'thumbnail'), $file); ?>
+                                <?php echo file_image('square_thumbnail', array('class' => 'thumbnail-sm'), $file); ?>
                             </a>
                             <?php echo file_markup($file);?>
                         </div>

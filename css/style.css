@@ -2352,7 +2352,11 @@ header {
 }
 
 .thumbnail {
-  height:200px;
+    height:200px;
+}
+
+.thumbnail-sm {
+    height: 100px;
 }
 
 .item-collapsed {
