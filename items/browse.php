@@ -14,7 +14,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
 <?php if ($total_results > 0): ?>
 
     <?php
-    $sortLinks[__('Interviewee')] = 'Dublin Core,Title';
+    $sortLinks[__('Interviewee')] = 'Item Type Metadata,Interviewee';
     $sortLinks[__('Location')] = 'Item Type Metadata,Location';
     $sortLinks[__('Date of Interview')] = 'Item Type Metadata, Data of Interview';
     ?>
