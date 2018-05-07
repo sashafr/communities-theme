@@ -51,16 +51,16 @@
                     <p><?php echo metadata('item', array('Item Type Metadata', 'Interview Summary')); ?></p>
                 </div>
             <?php endif; ?>
-        </div>
 
-        <div class="col-sm-8 read-more-wrap">
-            <?php if (metadata('item', array('Item Type Metadata', 'Transcription')) != ""): ?>
-                <div class="read-more-content">
-                    <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
-                </div>
-            <?php else: ?>
-                <p>This item does not have a transcription yet.</p>
-            <?php endif; ?>
+            <div class="read-more-wrap">
+                <?php if (metadata('item', array('Item Type Metadata', 'Transcription')) != ""): ?>
+                    <div class="read-more-content">
+                        <p><?php echo metadata('item', array('Item Type Metadata', 'Transcription')); ?></p>
+                    </div>
+                <?php else: ?>
+                    <p>This item does not have a transcription yet.</p>
+                <?php endif; ?>
+            </div>
         </div>
 
         <!-- Get all media files except the first two -->
