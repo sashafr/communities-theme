@@ -76,7 +76,6 @@
                             <a href="<?php echo $url?>">
                                 <?php echo file_image('square_thumbnail', array('class' => 'thumbnail-sm'), $file); ?>
                             </a>
-                            <?php echo file_markup($file);?>
                         </div>
                     <?php } ?>
                 </div>
