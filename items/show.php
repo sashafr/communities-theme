@@ -8,8 +8,8 @@
                 <?php foreach (item_type_elements() as $element => $elementtext): ?>
                     <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription" && $element != "Interview Summary"): ?>
                         <tr class="element" >
-                            <td ><?php echo $element ?>:</td>
-                            <td ><?php echo $elementtext ?></td>
+                            <td style="vertical-align: top;"><?php echo $element ?>:</td>
+                            <td style="vertical-align: top;"><?php echo $elementtext ?></td>
                         </tr>
                     <?php endif; ?>
                 <?php endforeach; ?>
@@ -45,7 +45,7 @@
 
     <div class="row sh-transcription">
 
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="padding: 0;">
             <?php if (metadata('item', array('Item Type Metadata', 'Interview Summary')) != ""): ?>
                 <div>
                     <p><?php echo metadata('item', array('Item Type Metadata', 'Interview Summary')); ?></p>
@@ -61,6 +61,11 @@
                     <p>This item does not have a transcription yet.</p>
                 <?php endif; ?>
             </div>
+            <?php if (metadata('item', array('Dublin Core', 'Rights')) != ""): ?>
+                <div>
+                    <p><?php echo metadata('item', array('Dublin Core', 'Rights')); ?></p>
+                </div>
+            <?php endif; ?>
         </div>
 
         <!-- Get all media files except the first two -->

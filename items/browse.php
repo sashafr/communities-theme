@@ -57,9 +57,9 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
             <?php set_loop_records('collections', get_records('Collection')) ?>
             <?php foreach (loop('collections') as $collection): ?>
                 <div class="collection">
-                    <?php echo link_to_items_browse(metadata($collection, array('Dublin Core', 'Title')), array('collection'=>metadata($collection, 'id'))); ?>
+                    <h3><?php echo link_to_items_browse(metadata($collection, array('Dublin Core', 'Title')), array('collection'=>metadata($collection, 'id'))); ?></h3>
                     <ul>
-                        <?php set_loop_records('col_items', get_records('Item', array('collection'=>metadata($collection, 'id')))) ?>
+                        <?php set_loop_records('col_items', get_records('Item', array('collection'=>metadata($collection, 'id')), 100)) ?>
                         <?php foreach (loop('col_items') as $col_item): ?>
                             <li>
                                 <?php echo link_to($col_item, 'show', metadata($col_item, array('Dublin Core', 'Title'))) ?>
