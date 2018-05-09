@@ -8,7 +8,7 @@
                 <?php foreach (item_type_elements() as $element => $elementtext): ?>
                     <?php if ($elementtext != "" && $element != "Interviewee" && $element != "Transcription" && $element != "Interview Summary"): ?>
                         <tr class="element" >
-                            <td style="vertical-align: top;"><?php echo $element ?>:</td>
+                            <td style="vertical-align: top; width: 30%;"><?php echo $element ?>:</td>
                             <td style="vertical-align: top;"><?php echo $elementtext ?></td>
                         </tr>
                     <?php endif; ?>

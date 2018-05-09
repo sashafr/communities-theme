@@ -26,11 +26,11 @@ $searchRecordTypes = get_search_record_types();
                             <?php endif; ?>
                             <div class="img-caption img-table">
                                 <span class="img-table-cell">
-                                    <a href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a>
+                                    <a class="img-btn btn-p btn-trans" href="<?php echo record_url($record, 'show'); ?>"><?php echo $searchText['title'] ? $searchText['title'] : '[Unknown]'; ?></a>
                                 </span>
                             </div>
                         </div>
-                        
+
                     </div><!-- end class="item-meta" -->
 
                 <?php endforeach; ?>
