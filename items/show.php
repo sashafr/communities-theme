@@ -61,11 +61,6 @@
                     <p>This item does not have a transcription yet.</p>
                 <?php endif; ?>
             </div>
-            <?php if (metadata('item', array('Dublin Core', 'Rights')) != ""): ?>
-                <div>
-                    <p><?php echo metadata('item', array('Dublin Core', 'Rights')); ?></p>
-                </div>
-            <?php endif; ?>
         </div>
 
         <!-- Get all media files except the first two -->
@@ -87,6 +82,12 @@
             <?php endif; ?>
         </div>
     </div>
+
+    <?php if (metadata('item', array('Dublin Core', 'Rights')) != ""): ?>
+        <div>
+            <p><?php echo metadata('item', array('Dublin Core', 'Rights')); ?></p>
+        </div>
+    <?php endif; ?>
 
     <!-- If the item belongs to a collection, the following creates a link to that collection. -->
     <?php if (metadata('item', 'Collection Name')): ?>
