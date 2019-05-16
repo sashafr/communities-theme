@@ -1,5 +1,3 @@
-
-
 <?php
 $pageTitle = __('Browse Items');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
@@ -16,7 +14,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'items browse'));
     <?php
     $sortLinks[__('Interviewee')] = 'Item Type Metadata,Interviewee';
     $sortLinks[__('Location')] = 'Item Type Metadata,Location';
-    $sortLinks[__('Date of Interview')] = 'Item Type Metadata, Data of Interview';
+    $sortLinks[__('Date of Interview')] = 'Item Type Metadata, Date of Interview';
     ?>
     <div id="sort-links">
         <span class="sort-label"><?php echo __('Sort by: '); ?></span><?php echo browse_sort_links($sortLinks); ?>

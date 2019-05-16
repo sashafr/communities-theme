@@ -11,7 +11,7 @@
                 <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
                     <p><?php echo $copyright; ?></p>
                 <?php endif; ?>
-                <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+                <p>Theme developed by the <a href="https://github.com/upenndigitalscholarship">Penn Libraries</a> |  <a href="https://github.com/upenndigitalscholarship/communities-theme">Get the Code</a></p>
             </div>
 
             <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>

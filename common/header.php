@@ -31,8 +31,7 @@
     <!-- JavaScripts -->
     <?php
     queue_js_url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
-    queue_js_file(array('jquery-accessibleMegaMenu', 'minimalist', 'globals'));
-    queue_js_file(array('readmore', 'minimalist', 'globals'));
+    queue_js_file(array('readmore', 'jquery-accessibleMegaMenu', 'minimalist', 'globals'));
     echo head_js();
     ?>
     <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -42,7 +41,7 @@
     <a href="#content" id="skipnav"><?php echo __('Skip to main content'); ?></a>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
 
-    <header role="banner" class="sh-header">
+    <header role="banner" class="sh-header" <?php if (get_theme_option('banner')): ?>style="background: transparent url(<?php echo WEB_ROOT.'/files/theme_uploads/'.get_theme_option('banner'); ?>) center left no-repeat; background-size: cover !important;" <?php endif; ?>>
 
         <div id="header-wrap">
             <?php fire_plugin_hook('public_header', array('view'=>$this)); ?>
@@ -65,8 +64,6 @@
 
             </nav>
         </div>
-
-        <div class="counter"></div>
 
     </header>
 

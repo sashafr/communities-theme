@@ -46,7 +46,7 @@
     <div class="row sh-transcription">
 
         <div class="col-sm-8" style="padding: 0;">
-            <?php if (metadata('item', array('Item Type Metadata', 'Interview Summary')) != ""): ?>
+            <?php if (element_exists('Item Type Metadata', 'Interview Summary') && metadata('item', array('Item Type Metadata', 'Interview Summary')) != ""): ?>
                 <div>
                     <p><?php echo metadata('item', array('Item Type Metadata', 'Interview Summary')); ?></p>
                 </div>
