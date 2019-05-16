@@ -461,7 +461,6 @@ td, th {
     width: 100%;
     float: right;
     margin-right: 0;
-    *margin-left: -1em;
     margin-top: 1em;
     display: inline;
 }
@@ -632,7 +631,7 @@ body {
 }
 
 #content {
-    padding: 1em 0 2em 0;
+    padding: 11em 0 2em 0;
 }
 
 abbr, acronym {
@@ -1048,7 +1047,7 @@ a:hover {
     content: "\2014\0020";
 }
 #top-nav [aria-haspopup="true"]:after {
-    font-family: 'Lato', sans-serif;
+    font-family: "FontAwesome";
     content: "\f0da";
     margin: 0 0 0 .5em;
     vertical-align: bottom;
@@ -2418,5 +2417,5 @@ font-weight: bold
 
 .sh-header {
     background-color: #fff;
-    position: relative
+    position: absolute;
 }
